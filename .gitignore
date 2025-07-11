@@ -1,3 +1,14 @@
+.bmad-core/
+.bmad-creator-tools/
+.bmad-infrastructure-devops/
+.claude/
+.cursor/
+.gemini/
+docs/architecture/
+docs/concept/
+docs/prd/
+docs/stories/
+web-bundles/
 .env
 .vscode/
 logs
