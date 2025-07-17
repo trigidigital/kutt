@@ -1,0 +1,52 @@
+<header>
+  <div class="logo-wrapper">
+    <a class="logo nav" href="/" title="Homepage">
+      <img src="https://s3.crez.biz.id/trigidigital/logo-favicon-trigidigital.png" alt="kutt" width="24" height="24" />
+      {{site_name}}
+    </a>
+    <ul class="logo-links">
+      <li>
+        <a class="nav" href="https://trigidigital.com" target="_blank" rel="noopener noreferrer" title="Digital Marketing">
+          Digital Marketing Services
+        </a>
+      </li>
+        <li>
+          <a class="nav" href="https://t.me/trigidigital_id" title="Developer Services">
+            Build Your Own
+          </a>
+        </li>
+    </ul>
+  </div>
+  <nav>
+    <ul>
+      {{#unless user}}
+        <li>
+          <a class="button primary" href="/login" title="Sign In Dashboard">
+            SIGN IN
+          </a>
+        </li>
+      {{/unless}}
+      {{#if user}}
+        <li>
+          <a class="button primary" href="/settings" title="Settings">
+            <span>{{> icons/cog}}</span>
+            Settings
+          </a>
+        </li>
+        {{#if isAdmin}}
+          <li>
+            <a class="button secondary" href="/admin" title="Admin">
+              <span>{{> icons/shield}}</span>
+              Admin
+            </a>
+          </li>
+        {{/if}}
+        <li>
+          <a class="nav" href="/logout" title="Log out">
+            LOG OUT
+          </a>
+        </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
