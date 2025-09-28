@@ -1,6 +1,6 @@
 <p align="center"><a href="https://kutt.it" title="kutt.it"><img src="https://raw.githubusercontent.com/thedevs-network/kutt/9d1c873897c3f5b9a1bd0c74dc5d23f2ed01f2ec/static/images/logo-github.png" alt="Kutt.it"></a></p>
 
-# Kutt.it
+# Kutt.it dev
 
 **Kutt** is a modern URL shortener with support for custom domains. Create and edit links, view statistics, manage users, and more.
 
@@ -49,7 +49,7 @@ Support the development of Kutt by making a donation or becoming an sponsor.
 
 ## Setup
 
-The only prerequisite is [Node.js](https://nodejs.org/) (version 20 or above). The default database is SQLite. You can optionally install Postgres or MySQL/MariaDB for the database or Redis for the cache. 
+The only prerequisite is [Node.js](https://nodejs.org/) (version 20 or above). The default database is SQLite. You can optionally install Postgres or MySQL/MariaDB for the database or Redis for the cache.
 
 When you first start the app, you're prompted to create an admin account.
 
@@ -86,7 +86,7 @@ Official Kutt Docker image is available on [Docker Hub](https://hub.docker.com/r
 
 The app is configured via environment variables. You can pass environment variables directly or create a `.env` file. View [`.example.env`](./.example.env) file for the list of configurations.
 
-All variables are optional except `JWT_SECRET` which is required on production. 
+All variables are optional except `JWT_SECRET` which is required on production.
 
 You can use files for each of the variables by appending `_FILE` to the name of the variable. Example: `JWT_SECRET_FILE=/path/to/secret_file`.
 
@@ -120,15 +120,15 @@ You can use files for each of the variables by appending `_FILE` to the name of 
 | `SERVER_CNAME_ADDRESS` | The subdomain shown to the user on the setting's page. It's only for display purposes and has no other use. | - | `custom.yoursite.com` |
 | `CUSTOM_DOMAIN_USE_HTTPS` | Use https for links with custom domain. It's on you to generate SSL certificates for those domains manually—at least on this version for now. | `false` | `true` |
 | `ENABLE_RATE_LIMIT` | Enable rate limiting for some API routes. If Redis is enabled uses Redis, otherwise, uses memory. | `false` | `true` |
-| `MAIL_ENABLED` | Enable emails, which are used for signup, verifying or changing email address, resetting password, and sending reports. If is disabled, all these functionalities will be disabled too. | `false` | `true` | 
+| `MAIL_ENABLED` | Enable emails, which are used for signup, verifying or changing email address, resetting password, and sending reports. If is disabled, all these functionalities will be disabled too. | `false` | `true` |
 | `MAIL_HOST` | Email server host | - | `your-mail-server.com` |
-| `MAIL_PORT` | Email server port | `587` | `465` (SSL) | 
-| `MAIL_USER` | Email server user | - | `myuser` | 
-| `MAIL_PASSWORD` | Email server password for the user | - | `mypassword` | 
-| `MAIL_FROM` | Email address to send the user from | - | `example@yoursite.com` | 
-| `MAIL_SECURE` | Whether use SSL for the email server connection | `false` | `true` | 
-| `REPORT_EMAIL` | The email address that will receive submitted reports | - | `example@yoursite.com` | 
-| `CONTACT_EMAIL` | The support email address to show on the app | - | `example@yoursite.com` | 
+| `MAIL_PORT` | Email server port | `587` | `465` (SSL) |
+| `MAIL_USER` | Email server user | - | `myuser` |
+| `MAIL_PASSWORD` | Email server password for the user | - | `mypassword` |
+| `MAIL_FROM` | Email address to send the user from | - | `example@yoursite.com` |
+| `MAIL_SECURE` | Whether use SSL for the email server connection | `false` | `true` |
+| `REPORT_EMAIL` | The email address that will receive submitted reports | - | `example@yoursite.com` |
+| `CONTACT_EMAIL` | The support email address to show on the app | - | `example@yoursite.com` |
 
 ## Themes and customizations
 
@@ -165,7 +165,7 @@ custom/
 - **views**: Custom HTML templates to render. ([View example →](https://github.com/thedevs-network/kutt-customizations/tree/main/themes/crimson/views))
   - It should follow the same file naming and folder structure as [`/server/views`](./server/views)
   - Although we try to keep the original file names unchanged, be aware that new changes on Kutt might break your custom views.
- 
+
 #### Example theme: Crimson
 
 This is an example and official theme. Crimson includes custom styles, images, and views.
@@ -242,4 +242,3 @@ Download Kutt's extension for web browsers via below links.
 Pull requests are welcome. Open a discussion for feedback, requesting features, or discussing ideas.
 
 Special thanks to [Thomas](https://github.com/trgwii) and [Muthu](https://github.com/MKRhere). Logo design by [Muthu](https://github.com/MKRhere).
-
